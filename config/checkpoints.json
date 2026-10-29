@@ -1,0 +1,1954 @@
+[
+  {
+    "configuration": "original",
+    "training_seed": 42,
+    "size": 10,
+    "path": "checkpoints/original/n10/policy.zip",
+    "sha256": "00ad92de85e0ee30efe746e0f8b92857195a9ce7a02b8d3918bb5bd2a1f78470",
+    "training": {
+      "size": 10,
+      "total_timesteps": 200000,
+      "train_instances": 500,
+      "seed": 42,
+      "n_envs": 4,
+      "max_nodes": 50,
+      "behavior_clone_epochs": 3,
+      "reward_config": {
+        "service_reward": 100.0,
+        "completion_bonus": 1000.0,
+        "invalid_action_penalty": 500.0,
+        "unserved_penalty": 5000.0,
+        "time_weight": 0.5,
+        "distance_weight": 1.0,
+        "nearest_neighbor_regret_weight": 2.0,
+        "nearest_neighbor_bonus": 25.0,
+        "final_makespan_weight": 0.1,
+        "final_distance_weight": 0.1,
+        "step_penalty": 1.0
+      },
+      "training_runtime_seconds": 69.89311875000021,
+      "training_mode": "curriculum_stage",
+      "curriculum_stage": 1,
+      "curriculum_sizes": [
+        10,
+        20,
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "configuration": "original",
+    "training_seed": 42,
+    "size": 20,
+    "path": "checkpoints/original/n20/policy.zip",
+    "sha256": "abaa54aa0e8ce450680f443bc55ca6953b28d3e8e97f90004398cac3aefbe7d9",
+    "training": {
+      "size": 20,
+      "total_timesteps": 400000,
+      "train_instances": 500,
+      "seed": 42,
+      "n_envs": 4,
+      "max_nodes": 50,
+      "behavior_clone_epochs": 3,
+      "reward_config": {
+        "service_reward": 100.0,
+        "completion_bonus": 1000.0,
+        "invalid_action_penalty": 500.0,
+        "unserved_penalty": 5000.0,
+        "time_weight": 0.5,
+        "distance_weight": 1.0,
+        "nearest_neighbor_regret_weight": 2.0,
+        "nearest_neighbor_bonus": 25.0,
+        "final_makespan_weight": 0.1,
+        "final_distance_weight": 0.1,
+        "step_penalty": 1.0
+      },
+      "training_runtime_seconds": 162.06881199999953,
+      "training_mode": "curriculum_stage",
+      "curriculum_stage": 2,
+      "curriculum_sizes": [
+        10,
+        20,
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "configuration": "original",
+    "training_seed": 42,
+    "size": 30,
+    "path": "checkpoints/original/n30/policy.zip",
+    "sha256": "b75d28ea8df2711b853d581aa6dacd878c50642242f746e7cd99b61fa394a091",
+    "training": {
+      "size": 30,
+      "total_timesteps": 600000,
+      "train_instances": 500,
+      "seed": 42,
+      "n_envs": 4,
+      "max_nodes": 50,
+      "behavior_clone_epochs": 3,
+      "reward_config": {
+        "service_reward": 100.0,
+        "completion_bonus": 1000.0,
+        "invalid_action_penalty": 500.0,
+        "unserved_penalty": 5000.0,
+        "time_weight": 0.5,
+        "distance_weight": 1.0,
+        "nearest_neighbor_regret_weight": 2.0,
+        "nearest_neighbor_bonus": 25.0,
+        "final_makespan_weight": 0.1,
+        "final_distance_weight": 0.1,
+        "step_penalty": 1.0
+      },
+      "training_runtime_seconds": 272.81245124999987,
+      "training_mode": "curriculum_stage",
+      "curriculum_stage": 3,
+      "curriculum_sizes": [
+        10,
+        20,
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "configuration": "original",
+    "training_seed": 42,
+    "size": 40,
+    "path": "checkpoints/original/n40/policy.zip",
+    "sha256": "555452c8dcb7ee5649c79751595d744dd4be6d600b92c175fc821574958bdc72",
+    "training": {
+      "size": 40,
+      "total_timesteps": 800000,
+      "train_instances": 500,
+      "seed": 42,
+      "n_envs": 4,
+      "max_nodes": 50,
+      "behavior_clone_epochs": 3,
+      "reward_config": {
+        "service_reward": 100.0,
+        "completion_bonus": 1000.0,
+        "invalid_action_penalty": 500.0,
+        "unserved_penalty": 5000.0,
+        "time_weight": 0.5,
+        "distance_weight": 1.0,
+        "nearest_neighbor_regret_weight": 2.0,
+        "nearest_neighbor_bonus": 25.0,
+        "final_makespan_weight": 0.1,
+        "final_distance_weight": 0.1,
+        "step_penalty": 1.0
+      },
+      "training_runtime_seconds": 444.8574594170004,
+      "training_mode": "curriculum_stage",
+      "curriculum_stage": 4,
+      "curriculum_sizes": [
+        10,
+        20,
+        30,
+        40
+      ]
+    }
+  },
+  {
+    "configuration": "full",
+    "training_seed": 42,
+    "size": 10,
+    "sha256": "c1a311e8cda22cd7e9211f1b03274bed0a69b96971f1ef3bb9d1ae404b74adb9",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_42/n10/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 42,
+    "size": 20,
+    "sha256": "39831d3773c15ce4c83036e36ae1784f28db47072757225c5e87ec950cb7bb71",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_42/n20/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 42,
+    "size": 30,
+    "sha256": "4a629d6ef7dfe5a600f91569b168d8356b2138b873ac76a803196cd2925c4318",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_42/n30/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 42,
+    "size": 40,
+    "sha256": "72755444f8e665eabec72bddf813dfea5c5517471149614c0d197112efffcbef",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_42/n40/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 43,
+    "size": 10,
+    "sha256": "dd0c2254af3fb30ef21ce004f4119aaeaee7afa35861759e30526e3ef5c68101",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_43/n10/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 43,
+    "size": 20,
+    "sha256": "060ab4b9346c310bdb2c2f00b890338d432a16b669768388cf5ed4ff809b2dec",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_43/n20/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 43,
+    "size": 30,
+    "sha256": "72e350bbd22c44ff4a02ab875b5347c8b07d707c20989cb2b9c96f5709fa8d11",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_43/n30/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 43,
+    "size": 40,
+    "sha256": "f523e38be61e2d99934509a9eb8404f06d154e601ce7fa904d27d4a17668ca4a",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_43/n40/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 44,
+    "size": 10,
+    "sha256": "7e4d61204d717ffb7f23c0fe50683572a4b1951dfd840f8dd44df824221a80c7",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_44/n10/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 44,
+    "size": 20,
+    "sha256": "1f11a434d98d44254069e458daed861623e8031df8b97b97a378e18f98502fde",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_44/n20/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 44,
+    "size": 30,
+    "sha256": "91dbbd9ff39c75e78248a7c2adc5543e90c71ece1b13c2fb3cd7b17896b59c39",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_44/n30/policy.zip"
+  },
+  {
+    "configuration": "full",
+    "training_seed": 44,
+    "size": 40,
+    "sha256": "95de6ef1ca3bfdcfe3d10b0003d39240f6b4c77781e7c2b70a343754f139fbd3",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/full/seed_44/n40/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 42,
+    "size": 10,
+    "sha256": "8b026aa1e01a188beb8403be312333448c764142bf72c101c4562f535a880892",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_42/n10/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 42,
+    "size": 20,
+    "sha256": "81fcd7fa468359780c1f74f9bea18d0aa13b6b7509606d60082d4e06b6740d36",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_42/n20/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 42,
+    "size": 30,
+    "sha256": "63255742f7ecf5e87b881d3d3e0d1d2cde35022da7df55e0730d838c1a89486d",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_42/n30/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 42,
+    "size": 40,
+    "sha256": "c5e46fef0b658cf5a6cc056b0a72251afbedc83065ec733a435e8b39c0b955ad",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_42/n40/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 43,
+    "size": 10,
+    "sha256": "952d7b268b47965eab74576129b634d3a2dd6288bec15fb7890476a412c95442",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_43/n10/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 43,
+    "size": 20,
+    "sha256": "496b6e40575738e7688f5d27b9bbde03366c4e53bf80e0da608c55dedc714d4d",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_43/n20/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 43,
+    "size": 30,
+    "sha256": "7e836ea16fa57d9c23ef78e5e5cca03fef8fe369a062a92308d62bc7367a4d31",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_43/n30/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 43,
+    "size": 40,
+    "sha256": "6a689cfa930059efbe82051d851b7d5b04f5e2fc11f5c882abb48c50f695bf40",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_43/n40/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 44,
+    "size": 10,
+    "sha256": "5656955ec63f95af028cade8dd959d81c0cd9c68f502b5fef38fc12c0dd84d25",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_44/n10/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 44,
+    "size": 20,
+    "sha256": "6bbdfbe53f5cfa91f8ff63981ab3412451c6f66c3037aa4a2eb8d03145001365",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_44/n20/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 44,
+    "size": 30,
+    "sha256": "d39567d1792561feafa27fe76bd95d5016c673e32bf642bbf7e1eb8002207851",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_44/n30/policy.zip"
+  },
+  {
+    "configuration": "bc_only",
+    "training_seed": 44,
+    "size": 40,
+    "sha256": "b237fd9d14bd89eaa36c1bbc54863c126549b1b13b688dc1e8e4143bff78eb67",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 0,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/bc_only/seed_44/n40/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 42,
+    "size": 10,
+    "sha256": "2daf98fdb2dd643c7e1f52fc9cd2a5df486bdbba2fe6240bfbb9600a084b42df",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_42/n10/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 42,
+    "size": 20,
+    "sha256": "839256d127cf1913e9345c8df6220cb44a47deedb03f9f53b22da3a4d3c84290",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_42/n20/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 42,
+    "size": 30,
+    "sha256": "3cfcf1463302dd13b8104a731d7f538d0c2bdcee7a87a7b78c96c5c1abe5bddd",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_42/n30/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 42,
+    "size": 40,
+    "sha256": "f6f333d509de9883a0ddf609ea511e23107a8cb2d3b7cd8b36229525f8aaece0",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_42/n40/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 43,
+    "size": 10,
+    "sha256": "905b43079a1533ff0c733273f2ec34d8446475387741371dc734e33fe5c89acb",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_43/n10/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 43,
+    "size": 20,
+    "sha256": "7a6ff8590b10683ece33aeda244bdcd9644d8e86497abc667493936494836a37",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_43/n20/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 43,
+    "size": 30,
+    "sha256": "6701536dfc033250da847ef68639a3bc7fda70fd6624efc7277ec514373ab484",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_43/n30/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 43,
+    "size": 40,
+    "sha256": "3ab416e289c6aafea46e8d443e74508f68c09dd29736e060a25f4e3e9af2acdf",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_43/n40/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 44,
+    "size": 10,
+    "sha256": "5416b1e89faa9a1ff6083d823320198cd300a47e43791801d3c169c8efa8fada",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_44/n10/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 44,
+    "size": 20,
+    "sha256": "d0191f12f0052f600edd20301d9bc6f0abf13fe777250bd6e027103422a52239",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_44/n20/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 44,
+    "size": 30,
+    "sha256": "40e84e318c6adc41f873324950fc4343721da944a42a8f78a61a783f89a670bd",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_44/n30/policy.zip"
+  },
+  {
+    "configuration": "no_bc",
+    "training_seed": 44,
+    "size": 40,
+    "sha256": "1f2114c1bbee83a58297e170d194b00b4c0895d4b44ed9f5cf9ed94ca38ca78a",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_bc/seed_44/n40/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 42,
+    "size": 10,
+    "sha256": "8235caf08d1407a80615941debb54a14d3f92ebd59927857cdfb5970640ee8ba",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_42/n10/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 42,
+    "size": 20,
+    "sha256": "417d793d4d7837544d70a13660864bb7d0f7cff8b87ed2e504b0b504b503dd56",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 401408,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_42/n20/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 42,
+    "size": 30,
+    "sha256": "a7daa81649a1ef14c0957980efdc32d8111ab98a05c2149819d85ebb4004e3c5",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_42/n30/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 42,
+    "size": 40,
+    "sha256": "6b68cbc20d14441adaea4262bc975787d2b1f8ef99ce5acd8f17eb793d6dac6d",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 802816,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_42/n40/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 43,
+    "size": 10,
+    "sha256": "472746ffd66f3f46be901c855c375d1e583ac6247ea98358c2f45a525671defb",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_43/n10/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 43,
+    "size": 20,
+    "sha256": "54d7330b8e7f75ba9ba15eb4f7c74a4bb4f8e31bceb0f5dc8e6a2f027f70a5aa",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 401408,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_43/n20/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 43,
+    "size": 30,
+    "sha256": "85ec856a453f6c95332250b883b84ae3abd114669667635cb4f5240f20815158",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_43/n30/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 43,
+    "size": 40,
+    "sha256": "55814c998c6505863731229080661e17424e7f36a4305aaf7e985d48a81ddd4c",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 802816,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_43/n40/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 44,
+    "size": 10,
+    "sha256": "bbb010a3e99b3d36a1235c13cb1b0b7bb91c5b61b2931287fb74b26c41bf33e0",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_44/n10/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 44,
+    "size": 20,
+    "sha256": "78be9756dbbed9d41a2041b002e1426b0c65af3dba5da55d894f48bae11381fb",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 401408,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_44/n20/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 44,
+    "size": 30,
+    "sha256": "59a4f888995467e344ebe065f232d5d0a9026c4bf692ad281cd532611173fc74",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_44/n30/policy.zip"
+  },
+  {
+    "configuration": "no_curriculum",
+    "training_seed": 44,
+    "size": 40,
+    "sha256": "be74c5453bd23ad5e8f9439d96cfefad19eaf86b1608ac1af43c6ff8ce137ec9",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "num_timesteps": 802816,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/no_curriculum/seed_44/n40/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 42,
+    "size": 10,
+    "sha256": "4fb6987c34b942f3870672807bc295d0d900053305cc9442b5275a252df1d23f",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_42/n10/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 42,
+    "size": 20,
+    "sha256": "b6c2cac732bdd892bf3413d2dc8c6f7864aef21de8d1f1634fc3b9f1ef8931f6",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_42/n20/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 42,
+    "size": 30,
+    "sha256": "494be5479ce7e73d0ffb05531c5880e5e554226ffe09e9156472fed00df39ffd",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_42/n30/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 42,
+    "size": 40,
+    "sha256": "56178d438ed1d2ff6ac0e2edd1c7459e1d4c73066e1a0b23841b371916333e9e",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_42/n40/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 43,
+    "size": 10,
+    "sha256": "9df51864a5a02c87b91c152079fc8796e0d5709c564bd2c4bb5bd509c4113d08",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_43/n10/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 43,
+    "size": 20,
+    "sha256": "e5eab06e4a1f6d5ac9fe49e63e48d0a404e3d5ab3b26020a1ba132356309fa52",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_43/n20/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 43,
+    "size": 30,
+    "sha256": "03d73b4300584cf60dc50715d29d26e50e7dea685117c5ab756e3391d7c305ed",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_43/n30/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 43,
+    "size": 40,
+    "sha256": "8bb90af61905dac2893887db65194890bbe7c7079709be5f7e6a60eb395fd56e",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_43/n40/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 44,
+    "size": 10,
+    "sha256": "a3bfb99d419d2921c4116983942b1cd9b708dee0617ab2da43e90c2e7a7a5a08",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 204800,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_44/n10/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 44,
+    "size": 20,
+    "sha256": "96eadbb76d3f08ebcbe62d1a7395e35d78508859b6bfbea9f20fb50f7690ddb1",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 606208,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_44/n20/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 44,
+    "size": 30,
+    "sha256": "fbce4fa5e2137b98ba1255c08b5f2a2435a932046f2c593a87832abbd5037868",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 1212416,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_44/n30/policy.zip"
+  },
+  {
+    "configuration": "aligned_reward",
+    "training_seed": 44,
+    "size": 40,
+    "sha256": "0be4ff2e3a663324045f027b8706ab279b4c47c2752f7d50042c8b45f811ead8",
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "gamma": 1.0,
+    "num_timesteps": 2015232,
+    "n_epochs": 10,
+    "gae_lambda": 0.95,
+    "learning_rate": 0.0001,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    },
+    "path": "checkpoints/aligned_reward/seed_44/n40/policy.zip"
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "protocol_id": "truck_drone_benchmark_v1",
+  "sizes": [
+    10,
+    20,
+    30,
+    40
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "requested_stage_transitions": [
+    200000,
+    400000,
+    600000,
+    800000
+  ],
+  "actual_stage_transitions": [
+    204800,
+    401408,
+    606208,
+    802816
+  ],
+  "pool_base_seed": 42,
+  "training_instances_per_size": 500,
+  "validation_instances_per_size": 20,
+  "max_nodes": 50,
+  "distance_normalizer": 250.0,
+  "time_normalizer": 500.0,
+  "ppo": {
+    "learning_rate": 0.0001,
+    "n_steps": 2048,
+    "n_envs": 4,
+    "batch_size": 256,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "clip_range_vf": null,
+    "normalize_advantage": true,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "target_kl": null,
+    "policy_kwargs": {
+      "net_arch": {
+        "pi": [
+          256,
+          256
+        ],
+        "vf": [
+          256,
+          256
+        ]
+      }
+    }
+  },
+  "behavior_cloning": {
+    "epochs_per_stage": 3,
+    "batch_size": 512,
+    "learning_rate": 0.001,
+    "gradient_clip": 0.5,
+    "loss": "masked cross entropy",
+    "optimizer": "existing policy Adam; preserve moments across BC and PPO within a model",
+    "demonstrations": "deterministic original nearest_neighbor_policy using fixed training pools",
+    "shuffle_seed_formula": "12345 + size + 100000 * (training_seed - 42)"
+  },
+  "execution": {
+    "device": "cpu",
+    "torch_threads": 4,
+    "torch_interop_threads": 8,
+    "deterministic_torch_algorithms": true
+  },
+  "environment_seed_formula": "training_seed + 10000 * stage_index + 1000 * rank; seed local env and action space after SB3 initialization/set_env",
+  "configurations": {
+    "full": {
+      "cloning": true,
+      "curriculum": true,
+      "ppo": true,
+      "reward": "original",
+      "gamma": 0.99
+    },
+    "bc_only": {
+      "cloning": true,
+      "curriculum": true,
+      "ppo": false,
+      "reward": "original",
+      "gamma": 0.99
+    },
+    "no_bc": {
+      "cloning": false,
+      "curriculum": true,
+      "ppo": true,
+      "reward": "original",
+      "gamma": 0.99
+    },
+    "no_curriculum": {
+      "cloning": true,
+      "curriculum": false,
+      "ppo": true,
+      "reward": "original",
+      "gamma": 0.99
+    },
+    "aligned_reward": {
+      "cloning": true,
+      "curriculum": true,
+      "ppo": true,
+      "reward": "negative_incremental_time",
+      "gamma": 1.0
+    }
+  },
+  "checkpoint_selection": "save stage-end only; validation diagnostics only; no selection or early stopping",
+  "evaluation": {
+    "deterministic": true,
+    "masked": true,
+    "rollouts_per_instance": 1,
+    "test_path": "data/test_instances.json"
+  }
+}

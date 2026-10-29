@@ -1,0 +1,7 @@
+{
+  "name": "evaluated-checkpoints-v1.zip",
+  "url": "https://github.com/RaminTK/truck-drone-routing-benchmark/releases/download/v1.0.0/evaluated-checkpoints-v1.zip",
+  "sha256": "77b705180c83cd7c15bfca8a0aa496c214de8e1870a9864d3dad14c75a28fe3e",
+  "bytes": 193504286,
+  "checkpoint_files": 64
+}

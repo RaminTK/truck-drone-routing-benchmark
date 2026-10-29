@@ -1,0 +1,28 @@
+{
+  "budgets_ms": [
+    5,
+    20,
+    100,
+    1000
+  ],
+  "NN_PPO_repetitions": 3,
+  "search_trajectories_per_instance": 1,
+  "deadline_type": "soft",
+  "include": [
+    "per-instance setup",
+    "preprocessing",
+    "route/search",
+    "final service sequence"
+  ],
+  "exclude": [
+    "instance generation",
+    "model loading",
+    "file I/O",
+    "independent validation"
+  ],
+  "cpu": "Apple M2; 8 CPU cores; 8 GB RAM",
+  "torch_threads": 1,
+  "torch_interop_threads": 1,
+  "seed_rule": "42 + 20000 * customer_count + instance_id",
+  "snapshot_rule": "last global incumbent complete strictly before deadline; no late candidates"
+}

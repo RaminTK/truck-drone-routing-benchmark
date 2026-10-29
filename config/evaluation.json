@@ -1,0 +1,26 @@
+{
+  "sizes": [
+    10,
+    20,
+    30,
+    40
+  ],
+  "instances_per_size": 100,
+  "max_nodes": 50,
+  "deterministic": true,
+  "masked": true,
+  "rollouts_per_instance": 1,
+  "test_data": "reconstructed and validated against historical route traces; original demand/SVI not independently archived",
+  "independent_training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "original_reference_seed": 42,
+  "transfer_parent_seeds": {
+    "15": 260028015,
+    "25": 260028025,
+    "35": 260028035,
+    "45": 260028045
+  }
+}
